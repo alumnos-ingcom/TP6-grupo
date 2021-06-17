@@ -5,8 +5,8 @@
 
 
 def es_anagrama(primera_cadena, segunda_cadena):
-    primera_lista = list(str(primera_cadena))
-    segunda_lista = list(str(segunda_cadena))
+    primera_lista = list(str(primera_cadena.lower()))
+    segunda_lista = list(str(segunda_cadena.lower()))
     return sorted(primera_lista) == sorted(segunda_lista)
 
 
