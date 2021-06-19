@@ -29,13 +29,6 @@ def limpiar(palabra):
         palabra = palabra.replace(acento_u,"u")
     return palabra
 
-
-
-        
-
-
-    
-
 def anagrama_dos(archivo): 
     for linea in archivo:
         lista_2 = linea.split(sep=" ", maxsplit = 2)
@@ -50,11 +43,12 @@ def anagrama_dos(archivo):
         else:
             print(f"'{primera_palabra}' y '{segunda_palabra}' No son anagramas")
 
-    archivo.close()
+    
 
 def principal():
     archivo = open("anagramas.txt", "r", encoding="utf8")
     anagrama_dos(archivo)
+    archivo.close()
     
 
 
