@@ -3,7 +3,6 @@
 # Agustin Montiveros - @agustin-montiveros
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
-import shutil, os
 
 
 def codificador(archivo, cifrado):
@@ -12,6 +11,8 @@ def codificador(archivo, cifrado):
     return mostrar
    
 def principal():
+    import os
+    from pathlib import Path
     from soporte import ingreso_entero
     archivo = input("Ingrese el nombre del archivo que desea abrir: ")
     cifrado = ingreso_entero("Ingrese el cifrado: ", "El cifrado debe ser un numero.")
@@ -25,7 +26,8 @@ def principal():
             archivo_original.close()
             ruta = os.getcwd() + os.sep
             origen = ruta + archivo
-            destino = ruta + 'cifrado_prueba.cesar.txt'
+            archivo = os.path.splitext(f'{archivo}')[0]+''
+            destino = ruta + f'{archivo}.cesar.txt'
             archivo_a = origen
             nombre_nuevo = destino
             os.rename(archivo_a, nombre_nuevo)
