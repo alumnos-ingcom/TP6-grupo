@@ -21,7 +21,7 @@ def principal():
             arch = archivo_original.read()
             mostrar = decodificador(arch, cifrado)
             archivo_original.close()
-        with open(archivo, 'w', encoding="utf8") as archivo_original:
+        with open(archivo, 'r', encoding="utf8") as archivo_original:
 #             archivo_original.write(mostrar)
 #             archivo_original.close()
             ruta = os.getcwd() + os.sep
