@@ -29,15 +29,15 @@ def recuadro(mensaje):
     print('╚' + linea * ancho + '╝')
 
 def factorial(numero, es_lista):
-    factorial = 1
+    fact = 1
     if es_lista == True:
         lista_factorial = [1]
         for i in range(1, numero + 1):
-            factorial *= i
-            lista_factorial.append(factorial)
+            fact *= i
+            lista_factorial.append(fact)
         return lista_factorial
     else:
         for i in range(1, numero + 1):
-            factorial *= i
-        return factorial
+            fact *= i
+        return fact
     
